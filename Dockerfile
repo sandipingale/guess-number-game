@@ -16,4 +16,4 @@ RUN python -m venv venv && \
 COPY . .
 
 # Activate the virtual environment and run the script
-CMD [". venv/bin/activate && python main.py"]
+CMD . venv/bin/activate && python main.py

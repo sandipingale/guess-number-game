@@ -54,4 +54,4 @@ def verify_guess(user_number, server_number):
         return -1
     pass
 if __name__ == '__main__':
-   app.run()
+   app.run(host="0.0.0.0", port=80)
