@@ -15,4 +15,4 @@ RUN python -m venv venv && \
 COPY . .
 
 # Activate the virtual environment and run the script
-CMD . venv/bin/activate && gunicorn --config gunicorn_config.py main:app
+CMD . venv/bin/activate && gunicorn --config gunicorn_config.py --certfile=/usr/src/certs/cert.pem  --keyfile=/usr/src/certs/key.pem main:app
