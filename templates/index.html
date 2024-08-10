@@ -30,11 +30,6 @@
             <div class="column is-1">
                 <button class="button is-primary is-light is-outlined" id="submit-btn" value="submit">Start</button>
             </div>
-            <!--
-            <div class="column is-1">
-                <button class="button is-link is-light is-outlined" id="reset-btn" value="reset" type="reset">Reset</button>
-            </div>
-            -->
         </div>
     </form>
     <div class="columns">
@@ -63,13 +58,11 @@
                 this.classList.add("is-danger"); 
                 this.classList.add("is-dark"); 
             }
-    }, false);
+        }, false);
     }
  
     function click_button(evt){
-        
-        console.log(evt);
-        apiUrl = "/choice/" + evt
+        apiUrl = "/guess-number/choice/" + evt
         fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
